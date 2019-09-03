@@ -20,7 +20,7 @@ public class FilePartReader {
         this.filePath = filePath;
         if (fromLine < 1) throw new IllegalArgumentException("Starting line must be bigger than 0");
         this.fromLine = fromLine;
-        if (toLine < toLine) throw new IllegalArgumentException("Ending line must be bigger than the starting line");
+        if (toLine < fromLine) throw new IllegalArgumentException("Ending line must be bigger than the starting line");
         this.toLine = toLine;
     }
 
